@@ -2,7 +2,7 @@
   "name": "open-in-fork-button",
   "displayName": "Open in Fork Button",
   "description": "Open project in Fork by pushing button",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.83.0"
   },
