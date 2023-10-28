@@ -5,6 +5,9 @@ It add `Open in Fork` button to the status bar.
 
 # How to install
 
+install from [here](https://marketplace.visualstudio.com/manage/publishers/yudai1204/extensions/open-in-fork-button/hub)  
+or
+
 VSCode -> Extensions -> ... -> Install from VSIX
 
 # How to develop
