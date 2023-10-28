@@ -11,7 +11,7 @@ export function activate(context: ExtensionContext) {
   let disposable = commands.registerCommand("open-in-fork-button.open", () => {
     let rootPath: string = "";
     if (workspace.workspaceFolders !== undefined) {
-      rootPath = workspace.workspaceFolders[0].uri.path;
+      rootPath = workspace.workspaceFolders[0].uri.fsPath;
     } else {
       window.showErrorMessage(
         "Fork error: Working folder not found, open a folder an try again"
