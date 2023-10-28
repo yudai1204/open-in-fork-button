@@ -1,6 +1,7 @@
 # open-in-fork-button
 
 This is the extension to use Fork easily.
+It add `Open in Fork` button to the status bar.
 
 # How to install
 
