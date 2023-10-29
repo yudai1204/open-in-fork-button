@@ -3,6 +3,14 @@
 This is the extension to use Fork easily.
 It add `Open in Fork` button to the status bar.
 
+# Supports
+
+- MacOS (Stable)
+- WindowsOS (Beta)
+- WSL Linux (Beta)
+
+Do not use multibyte cases for filepath.
+
 # How to install
 
 install from [here](https://marketplace.visualstudio.com/items?itemName=yudai1204.open-in-fork-button)  

@@ -13,7 +13,7 @@ const execFork = (command: string) => {
         }
       }
     );
-  window.showInformationMessage(command);
+  // window.showInformationMessage(command);
 };
 
 export function activate(context: ExtensionContext) {
@@ -43,9 +43,22 @@ export function activate(context: ExtensionContext) {
           return;
         }
         const user = stdout.trim();
-        const forkPath = `C:\\Users\\${user}\\AppData\\Local\\Fork\\Fork.exe`;
-        command = `cmd.exe /c start ` + forkPath + ` ` + rootPath;
-        execFork(command);
+        const forkPath = `C:/Users/${user}/AppData/Local/Fork/Fork.exe`;
+        cp.exec('lsb_release -a', (err: any, stdout: string, stderr: any) => {
+          if (err) {
+            window.showErrorMessage(
+              "WSL Error: " + err
+            );
+            return;
+          }
+          const distroLine = stdout.split('\n').find(line => line.startsWith('Distributor ID:'));
+          if (distroLine) {
+            const distroName = distroLine?.split(':')?.pop()?.trim();
+            const winRootPath = `\\\\\\\\wsl.localhost\\\\${distroName}${rootPath.replace(/\//g, '\\\\')}`;
+            command = `cmd.exe /c start ` + forkPath + ` ` + winRootPath;
+            execFork(command);
+          }
+        });
       });
     } else if (os.platform() === 'darwin') {
       // MacOS
