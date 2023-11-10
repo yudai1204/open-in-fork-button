@@ -2,7 +2,7 @@
   "name": "open-in-fork-button",
   "displayName": "Open in Fork Button",
   "description": "Open project in Fork by pushing button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.83.0"
   },
@@ -12,7 +12,7 @@
   "activationEvents": [
     "*"
   ],
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -20,7 +20,26 @@
         "command": "open-in-fork-button.open",
         "title": "Open in Fork"
       }
-    ]
+    ],
+    "icons": {
+      "fork-logo": {
+        "description": "Fork Icon",
+        "default": {
+          "fontPath": "assets/font.woff",
+          "fontCharacter": "\\E900"
+        }
+      }
+    },
+    "configuration": {
+      "title": "Icon Button",
+      "properties": {
+        "openInForkButton.iconButton": {
+          "type": "boolean",
+          "description": "If true, the button will be displayed as an icon. If false, the button will display the text 'Open in Fork'.(restart required)",
+          "default": false
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -43,5 +62,14 @@
     "glob": "^10.3.3",
     "mocha": "^10.2.0",
     "typescript": "^5.2.2"
+  },
+  "license": "MIT LICENSE",
+  "bugs": {
+    "url": "https://github.com/yudai1204/open-in-fork-button/issues"
+  },
+  "homepage": "https://github.com/yudai1204/open-in-fork-button",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yudai1204/open-in-fork-button.git"
   }
 }

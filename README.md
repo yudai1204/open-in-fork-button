@@ -3,6 +3,12 @@
 This is the extension to use Fork easily.
 It add `Open in Fork` button to the status bar.
 
+![ScreenShot](/assets//ss.png)
+
+# Options
+
+You can change button value to only Icon in config.
+
 # Supports
 
 - MacOS (Stable)
