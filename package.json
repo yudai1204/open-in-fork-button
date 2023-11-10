@@ -2,7 +2,7 @@
   "name": "open-in-fork-button",
   "displayName": "Open in Fork Button",
   "description": "Open project in Fork by pushing button",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.83.0"
   },
@@ -64,9 +64,6 @@
     "typescript": "^5.2.2"
   },
   "license": "MIT LICENSE",
-  "bugs": {
-    "url": "https://github.com/yudai1204/open-in-fork-button/issues"
-  },
   "homepage": "https://github.com/yudai1204/open-in-fork-button",
   "repository": {
     "type": "git",
