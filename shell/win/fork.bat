@@ -1,0 +1,1 @@
+C:/Users/%USERNAME%/AppData/Local/Fork/Fork %cd%

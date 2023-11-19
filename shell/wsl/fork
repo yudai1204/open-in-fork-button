@@ -1,0 +1,4 @@
+#!/bin/bash
+distro_id=$(lsb_release -a 2>/dev/null | grep "^Distributor ID:" | cut -d':' -f2  | awk '{$1=$1; print}')
+current_directory=$(pwd)
+cmd.exe /c start C:/Users/%USERNAME%/AppData/Local/Fork/Fork.exe "\\\\wsl.localhost\\${distro_id}${current_directory//\//\\}"
